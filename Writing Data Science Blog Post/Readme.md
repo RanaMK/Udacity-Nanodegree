@@ -28,3 +28,14 @@ Question 3: How developers are thinking about programming and database languages
 
 I am using Python3 with no special libraries.
 The libraries I used: Numpy, Pandas,Matplotlib and Seaborn.
+
+## Files in this repository
+Working with programming and DB languages Code.ipynb -- containing the code for extracting and analyzing data in addition to some visualizations to best understand the data
+
+## Conclusion of Analysis
+In this project, we took a look at the Stackoverflow Annual Survey data from 2017 to 2020 to make an analysis on the top used programming and database languages by actual developers. In addition, we checked from their response, what are their desired working language in the future. Finally, we summarised the data by checking the common used and desired languages as well as the languages appealing and not appealing for developers to work with in the future.
+For question one, we can see that the top programming languages in the past 4 years didn’t change a lot and the main languages used by developers are Java, Python and Javascript as well as web development with HTML/CSS and the main database language SQL.
+For question2, we can see that starting 2017, some non relational databases appeared like PostgreSQL and MongoDB. However, the relational databases are still appearing till 2020 such as MySQL, SQL Server, SQLite, Microsoft SQL Server…etc. From this result, we can see that although the world is heading to use Non-relational database more for its additional functionalities but the traditional relational databases are indispensable.
+And finally for question 3, we can see that most of the desired programming and database languages are already the top current used languages by developers which makes us look deeper into the data and check the common languages that each developer use and what are the languages that are currently used by the developers and want to get rid of it or what are the new languages that they want to work with.
+Please take a look at the article or the code to see more about this analysis and check the visualizations for better understanding.
+This analysis is not covering all the programming and database languages used in the whole world and is only focusing on the data provided by developers who answered the Stackoverflow annual survey.
