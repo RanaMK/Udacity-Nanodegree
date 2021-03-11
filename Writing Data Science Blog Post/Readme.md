@@ -23,6 +23,12 @@ Question 1: What are the top programming languages used in the last four years w
 Question 2: How does working with databases change over time?
 Question 3: How developers are thinking about programming and database languages in the future?
 
+To answer th above questions, I followed the CRISP-DM process in the notebook code using the below steps:
+* Business Understanding
+* Data Understanding
+* Prepare Data
+* Data Modeling
+* Visualize the Results
 
 ## Libraries
 
