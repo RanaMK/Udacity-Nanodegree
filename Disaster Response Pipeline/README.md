@@ -1,5 +1,14 @@
 # Disaster Response Pipeline Project
 
+This project aimd at using ML to classigy message into 36 categories. It uses Multiclass classifier to achive this goal.
+
+First, we extract the data from csv files into python dataframes and make some data cleaning. Then, this cleaned data is loaded into a database table. (File: data/process_data.py)
+
+In the next step, we read the data from the database table and feed it into the Machine learning model to be trained. Then, we test the model and evaluate it with some testing data. At the end, the model is saved as pickle file. (File: models/train_classifier.py)
+
+In addition, there is a webpage with some simple charts about the data used. (app folder)
+
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
