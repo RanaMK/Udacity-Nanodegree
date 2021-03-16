@@ -1,15 +1,32 @@
 # Disaster Response Pipeline Project
 
-This project aims at using ML to classify messages into 36 categories. It uses Multiclass classifier to achive this goal.
+This project aims at using machine learning to classify messages sent during disaster events into 36 categories. It uses Multiclass classifier to ategorize these events so that the messages are sent to an appropriate disaster relief agency.
 
-First, we extract the data from csv files into python dataframes and make some data cleaning. Then, this cleaned data is loaded into a database table. (File: data/process_data.py)
+The project code is divided into two parts:
+1. ETL pipeline to extract data from csv files and load it into a database.
+2. Machine learning pipeline for message classification and evaluation.
 
-In the next step, we read the data from the database table and feed it into the Machine learning model to be trained. Then, we test the model and evaluate it with some testing data. At the end, the model is saved as pickle file. (File: models/train_classifier.py)
-
-In addition, there is a webpage with some simple charts about the data used. (app folder)
+The project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. 
 
 
-### Instructions:
+# Project Structure anf Files in the repository
+
+1. app folder: 
+    - template
+        - master.html # main page of web app
+        - go.html # classification result page of web app
+    - run.py # Flask file that runs app
+2. data folder: 
+    - disaster_categories.csv # data to process
+    - disaster_messages.csv # data to process
+    - process_data.py -- code to extract the data from csv files into python dataframes and make some data cleaningbefore loading it into a database table.
+    - InsertDatabaseName.db # database to save clean data to
+3. models folder: 
+    - train_classifier.py -- code to read the data from the database table and feed it into the Machine learning model to be trained. Then, it contains the code to                             test the model and evaluate it with some testing data. At the end, the model is saved as pickle file.
+    - classifier.pkl # saved model
+4. README.md -- Project Overview and Files Structure with instructions to use the code files.
+
+# Instructions to use the code files:
 1. Run the following commands in the project's root directory to set up your database and model.
 
     - To run ETL pipeline that cleans data and stores in database
