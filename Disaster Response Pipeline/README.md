@@ -1,6 +1,6 @@
 # Disaster Response Pipeline Project
 
-This project aimd at using ML to classigy message into 36 categories. It uses Multiclass classifier to achive this goal.
+This project aims at using ML to classify messages into 36 categories. It uses Multiclass classifier to achive this goal.
 
 First, we extract the data from csv files into python dataframes and make some data cleaning. Then, this cleaned data is loaded into a database table. (File: data/process_data.py)
 
