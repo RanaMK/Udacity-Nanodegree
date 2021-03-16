@@ -17,17 +17,17 @@ The project will include a web app where an emergency worker can input a new mes
         - go.html # classification result page of web app
     - run.py # Flask file that runs app
 2. data folder: 
-    - disaster_categories.csv # data to process
-    - disaster_messages.csv # data to process
+    - disaster_categories.csv -- data to process
+    - disaster_messages.csv -- data to process
     - process_data.py -- code to extract the data from csv files into python dataframes and make some data cleaningbefore loading it into a database table.
-    - InsertDatabaseName.db # database to save clean data to
+    - InsertDatabaseName.db -- database to save clean data to
 3. models folder: 
     - train_classifier.py -- code to read the data from the database table and feed it into the Machine learning model to be trained. Then, it contains the code to                             test the model and evaluate it with some testing data. At the end, the model is saved as pickle file.
-    - classifier.pkl # saved model
+    - classifier.pkl -- saved model
 4. README.md -- Project Overview and Files Structure with instructions to use the code files.
 
 # Instructions to use the code files:
-1. Run the following commands in the project's root directory to set up your database and model.
+1. Run the following commands in the project's root directory to set up the database and model.
 
     - To run ETL pipeline that cleans data and stores in database
         `python data/process_data.py data/disaster_messages.csv data/disaster_categories.csv data/DisasterResponse.db`
