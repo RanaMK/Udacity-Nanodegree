@@ -14,6 +14,17 @@ from sqlalchemy import create_engine
 app = Flask(__name__)
 
 def tokenize(text):
+    """
+    This function cleans the given text by removing urls and tokenizing the text into words
+    and then get the lemma of each word.In additon, remove the spaces in the words and make them lower letters.
+
+    Input:
+    text -- any string
+
+    Output:
+    tokens -- list of words after cleaning, tokenization and lemmatization
+    
+    """
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
 
