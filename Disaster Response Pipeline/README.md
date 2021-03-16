@@ -9,7 +9,7 @@ The project code is divided into two parts:
 The project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data. 
 
 
-# Project Structure anf Files in the repository
+## Project Structure anf Files in the repository
 
 1. app folder -- contains the web app code with the following files:
     - template
@@ -26,7 +26,7 @@ The project will include a web app where an emergency worker can input a new mes
     - classifier.pkl -- saved model
 4. README.md -- Project Overview and Files Structure with instructions to use the code files.
 
-# Instructions to use the code files:
+## Instructions to use the code files
 1. Run the following commands in the project's root directory to set up the database and model.
 
     - To run ETL pipeline that cleans data and stores in database
