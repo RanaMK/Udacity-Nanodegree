@@ -11,17 +11,17 @@ The project will include a web app where an emergency worker can input a new mes
 
 # Project Structure anf Files in the repository
 
-1. app folder: 
+1. app folder -- contains the web app code with the following files:
     - template
         - master.html # main page of web app
         - go.html # classification result page of web app
     - run.py # Flask file that runs app
-2. data folder: 
+2. data folder -- contains the data files and the code to process the data with the following files:
     - disaster_categories.csv -- data to process
     - disaster_messages.csv -- data to process
     - process_data.py -- code to extract the data from csv files into python dataframes and make some data cleaningbefore loading it into a database table.
     - InsertDatabaseName.db -- database to save clean data to
-3. models folder: 
+3. models folder -- contains the code for machine learning pipeline as well as the saved output model as pickle file with the following files: 
     - train_classifier.py -- code to read the data from the database table and feed it into the Machine learning model to be trained. Then, it contains the code to                             test the model and evaluate it with some testing data. At the end, the model is saved as pickle file.
     - classifier.pkl -- saved model
 4. README.md -- Project Overview and Files Structure with instructions to use the code files.
