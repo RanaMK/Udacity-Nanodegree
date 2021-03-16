@@ -32,8 +32,10 @@ import pickle
 def load_data(database_filepath):
     """
     Loads data from database into dataframes
+    
     Input:
-    Database file path
+    database_filepath -- Database file path
+
     Output:
     X -- ML Input dataframe
     Y -- ML output dataframe with classes as columns
@@ -51,6 +53,17 @@ def load_data(database_filepath):
 
 
 def tokenize(text):
+    """
+    This function cleans the given text by removing urls and tokenizing the text into words
+    and then get the lemma of each word.In additon, remove the spaces in the words and make them lower letters.
+
+    Input:
+    text -- any string
+
+    Output:
+    tokens -- list of words after cleaning, tokenization and lemmatization
+    
+    """
     # Remove urls
     url_regex = 'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     detected_urls = re.findall(url_regex, text)
@@ -70,7 +83,14 @@ def tokenize(text):
 
 def build_model(vectorizer='tfidf', classifier='Random Forst'):
     """
-    This function splits the data into training and test sets and fit the model into this data
+    This function splits the data into training and test sets and fit the model.
+    into this data. There are 6 versions of building the model:
+    1- Using Count vectorizer and Random Forest classifier
+    2- Using Count vectorizer and Decision Tree classifier
+    3- Using Count vectorizer and K Neareset Neighbor classifier
+    4- Using TFIDF vectorizer and Random Forest classifier
+    5- Using TFIDF vectorizer and Decision Tree classifier
+    6- Using TFIDF vectorizer and K Neareset Neighbor classifier
     
     Input:
     vectorizer -- takes one of two inputs 'count' or 'tfidf'
@@ -165,6 +185,7 @@ def build_model(vectorizer='tfidf', classifier='Random Forst'):
 def evaluate_model(model, X_test, Y_test, category_names):
     """
     This function uses the ML model to predict the output of any new data given and prints the classification result report as Precision, Recall and F1-score
+    and prints the classification report as Precision, Recall and F1-score
     
     Input:
     model -- ML model or classifier
