@@ -2,7 +2,10 @@
 # Udacity Data Scientist Capstone Project -- Starbucks Capstone Challenge
 
 ## Medium Blog Post
+
 Here is the Medium blog post I have written:
+
+https://rana-mahmoudkamel.medium.com/udacity-data-scientist-capstone-project-a037eb661a5
 
 
 ## Project Overview
