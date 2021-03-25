@@ -96,6 +96,57 @@ I am using Python3 with the below libraries:
 * seaborn
 
 
+## Evaluation Metrics
+The performance of machine learning algorithms can be measured with four main metrics.
+
+Before explaining the metrics, there are some terminologies to be described:
+
+* True Positives : the number of correctly classified observations as 'Yes' or positive.
+* True Negatives : the number of correctly classified observations as 'No' or negative.
+* False Positives : the number of wrongly classified observations as 'Yes' or positive while it should be 'No'.
+* False Negatives : the number of wrongly classified observations as 'No' or negative while it should be 'Yes'.
+
+Let's now explain the most important metrics in machine learning as follows.
+
+* Accuracy: it is the most intuitive performance measure calculated by:
+
+$\quad\quad\quad\Large \frac{True Positives + True Negatives}{True Positives + True Negatives + False Positives + False Negatives}$
+
+
+* Precision: it focuses on the ratio of correct positive observations calculated by:
+
+$\quad\quad\quad\quad\Large \frac{True Positives}{True Positives + False Positives}$
+
+
+* Recall: it is also known as sensitivity or true positive rate. It is the ratio of correctly predicted positive events calculated by:
+
+$\quad\quad\quad\quad\Large \frac{True Positives}{True Positives + False Negatives}$
+
+
+* F1-score: it takes into account the precision and recall to compute the model performance and it is called the harmonic rate of Precision and Recall. This metric is calculated by:
+
+$\quad\quad\quad\quad2*\Large\frac{Precision * Recall}{Precision + Recall}$
+
+
+* Confusion Matrix: it is another way to calculate any of the metrics above and specially used while running codes. It is a matrix showing the True Positive, True Negatives, False Positive and False Negative counts. The accuracy can be calculated by taking average of the values across the main diagonal. The confusion matrix is calculated as follows:
+
+|      |             | | Predicted Class |
+|-----:|------------:|---------------:| ---------------:|
+|      |             |P               |N                |
+|Actual|     P       |True Positives  | False Negatives |
+|Class |     N       |False Negatives | True Negatives  |
+
+
+Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are more important.
+In classification problems, imbalanced class distribution exists and thus F1-score is a better metric for evaluation that's the reason we used F1 score as evaluation metric for this project.
+
+
+## Improvements
+We could try other classifiers to improve the model accuracy. Also, we could try to use deep learning instead of machine learning and check if this could impact the results.
+
+Another improvement could be done is to balance the data by extracting an equalnumber of records for each event type "offer received", "offer viewed" and "offer completed". For example, deleting "offer received" and "offer viewed" rows for completed offers.
+
+
 ## Conclusion of Analysis
 In this project, we used machine learning to predict the purchasing type of users based on customer's properties as well as other purchasing attributes. We used 3 versions for running the model using 3 different classifiers:
 - Random Forest
