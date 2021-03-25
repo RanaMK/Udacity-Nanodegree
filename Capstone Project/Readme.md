@@ -108,34 +108,11 @@ Before explaining the metrics, there are some terminologies to be described:
 
 Let's now explain the most important metrics in machine learning as follows.
 
-* Accuracy: it is the most intuitive performance measure calculated by:
-
-$\quad\quad\quad\Large \frac{True Positives + True Negatives}{True Positives + True Negatives + False Positives + False Negatives}$
-
-
-* Precision: it focuses on the ratio of correct positive observations calculated by:
-
-$\quad\quad\quad\quad\Large \frac{True Positives}{True Positives + False Positives}$
-
-
-* Recall: it is also known as sensitivity or true positive rate. It is the ratio of correctly predicted positive events calculated by:
-
-$\quad\quad\quad\quad\Large \frac{True Positives}{True Positives + False Negatives}$
-
-
-* F1-score: it takes into account the precision and recall to compute the model performance and it is called the harmonic rate of Precision and Recall. This metric is calculated by:
-
-$\quad\quad\quad\quad2*\Large\frac{Precision * Recall}{Precision + Recall}$
-
-
-* Confusion Matrix: it is another way to calculate any of the metrics above and specially used while running codes. It is a matrix showing the True Positive, True Negatives, False Positive and False Negative counts. The accuracy can be calculated by taking average of the values across the main diagonal. The confusion matrix is calculated as follows:
-
-|      |             | | Predicted Class |
-|-----:|------------:|---------------:| ---------------:|
-|      |             |P               |N                |
-|Actual|     P       |True Positives  | False Negatives |
-|Class |     N       |False Negatives | True Negatives  |
-
+* Accuracy: it is the most intuitive performance measure. It is calculated by dividing the True Positive + True Negative by True Positives + True Negatives + False Positives + False Negatives.
+* Precision: it focuses on the ratio of correct positive observations.
+* Recall: it is also known as sensitivity or true positive rate. It is the ratio of correctly predicted positive events.
+* F1-score: it takes into account the precision and recall to compute the model performance and it is called the harmonic rate of Precision and Recall.
+* Confusion Matrix: it is another way to calculate any of the metrics above and specially used while running codes. It is a matrix showing the True Positive, True Negatives, False Positive and False Negative counts. The accuracy can be calculated by taking average of the values across the main diagonal.
 
 Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are more important.
 In classification problems, imbalanced class distribution exists and thus F1-score is a better metric for evaluation that's the reason we used F1 score as evaluation metric for this project.
