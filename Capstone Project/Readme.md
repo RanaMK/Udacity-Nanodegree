@@ -1,1 +1,70 @@
 
+# Udacity Data Scientist Capstone Project -- Starbucks Capstone Challenge
+
+## Medium Blog Post
+Here is the Medium blog post I have written:
+
+
+## Project Motivation
+
+## Introduction
+This data set contains simulated data that mimics customer behavior on the Starbucks rewards mobile app. Once every few days, Starbucks sends out an offer to users of the mobile app. An offer can be merely an advertisement for a drink or an actual offer such as a discount or BOGO (buy one get one free). Some users might not receive any offer during certain weeks.
+
+Not all users receive the same offer, and that is the challenge to solve with this data set.
+
+Your task is to combine transaction, demographic and offer data to determine which demographic groups respond best to which offer type. This data set is a simplified version of the real Starbucks app because the underlying simulator only has one product whereas Starbucks actually sells dozens of products.
+
+Every offer has a validity period before the offer expires. As an example, a BOGO offer might be valid for only 5 days. You'll see in the data set that informational offers have a validity period even though these ads are merely providing information about a product; for example, if an informational offer has 7 days of validity, you can assume the customer is feeling the influence of the offer for 7 days after receiving the advertisement.
+
+You'll be given transactional data showing user purchases made on the app including the timestamp of purchase and the amount of money spent on a purchase. This transactional data also has a record for each offer that a user receives as well as a record for when a user actually views the offer. There are also records for when a user completes an offer.
+
+Keep in mind as well that someone using the app might make a purchase through the app without having received an offer or seen an offer.
+
+## Problem Statement
+
+The program used to create the data simulates how people make purchasing decisions and how those decisions are influenced by promotional offers.
+Each person in the simulation has some hidden traits that influence their purchasing patterns and are associated with their observable traits. People produce various events, including receiving offers, opening offers, and making purchases.
+As a simplification, there are no explicit products to track. Only the amounts of each transaction or offer are recorded.
+There are three types of offers that can be sent: buy-one-get-one (BOGO), discount, and informational. In a BOGO offer, a user needs to spend a certain amount to get a reward equal to that threshold amount. In a discount, a user gains a reward equal to a fraction of the amount spent. In an informational offer, there is no reward, but neither is there a requisite amount that the user is expected to spend. Offers can be delivered via multiple channels.
+The basic task is to use the data to identify which groups of people are most responsive to each type of offer, and how best to present each type of offer.
+So in this project, we will use machine learning to predict the response of customers to offers either by "offer received", "offer viewed" or "offer completed". This information will be predicted based on some demographic informatio of the users as well as other purchasing data.
+
+
+
+To answer th above questions, I followed the CRISP-DM process in the notebook code using the below steps:
+
+- Business Understanding
+- Data Understanding
+- Prepare Data
+- Data Modeling
+- Visualize the Results
+
+## Files in this repository
+* data folder -- contains 3 json files
+* * portfolio.json -- Offers sent during 30-day test period (10 offers x 6 fields)
+* * profile.json -- Rewards program users (17000 users x 5 fields)
+* * transcript.json -- Event log (306648 events x 4 fields)
+* Starbucks_Capstone_notebook.ipynb -- python code for the project
+
+## Installed Python Libraries
+
+I am using Python3 with the below libraries:
+* pandas
+* numpy
+* matplotlib
+* math
+* json
+* sklearn
+* seaborn
+
+
+## Conclusion of Analysis
+In this project, we used machine learning to predict the purchasing type of users based on customer's properties as well as other purchasing attributes. We used 3 versions for running the model using 3 different classifiers:
+- Random Forest
+- K Nearest Neighbors
+- Decision Tree
+
+We can see that the three models perform almost the same with an accuracy between 74 ad 76% which is acceptable.
+
+There is one comment on data imbalance as most of the "offers" have purchasing type "offer received" and not "viewed" or "completed" as shown in the above tables of the counts of predicted target values from all models so most of the events are predicted as "offer received" because "offer received" is the most occuring event.
+
